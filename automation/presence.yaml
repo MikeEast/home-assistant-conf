@@ -1,0 +1,36 @@
+
+
+###############################################################
+
+- alias: Presence Force Check Location
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.ytterdorr
+      to: 'Open'
+    - platform: state
+      entity_id: binary_sensor.kallardorr
+      to: 'Open'
+    - platform: homeassistant
+      event: start
+  action:
+  # Catch home
+  - service: notify.ios_mickes_iphone
+    data:
+      message: "request_location_update"
+  - service: notify.ios_hannasiphone
+    data:
+      message: "request_location_update"
+  - service: notify.ios_filippasiphone
+    data:
+      message: "request_location_update"
+  - delay: '00:10:00'
+  # catch not_home
+  - service: notify.ios_mickes_iphone
+    data:
+      message: "request_location_update"
+  - service: notify.ios_hannasiphone
+    data:
+      message: "request_location_update"
+  - service: notify.ios_filippasiphone
+    data:
+      message: "request_location_update"

@@ -1,0 +1,5 @@
+    - platform: min_max
+      name: house_humidity
+      entity_ids:
+        - sensor.hallway_upstairs_humidity
+        - sensor.laundry_humidity

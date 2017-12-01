@@ -1,0 +1,21 @@
+  include:
+    domains:
+      - light
+      - binary_sensor
+      - switch
+      - sensor
+      - device_tracker
+  exclude:
+    domains:
+  #     - camera
+  #     - media_player
+      - sun
+  #     - calendar
+  #     - sensor
+      - group
+    entities:
+      - sensor.since_last_boot
+      - sensor.last_boot
+      - sensor.date__time
+      - sensor.date
+      - sensor.time

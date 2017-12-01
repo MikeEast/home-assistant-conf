@@ -1,0 +1,9 @@
+  - name: Pushbullet Micke
+    platform: pushbullet
+    api_key: !secret pushbullet_key
+  - name: All
+    platform: group
+    services:
+      - service: ios_mickes_iphone
+      - service: ios_hannasiphone
+      - service: ios_filippasiphone

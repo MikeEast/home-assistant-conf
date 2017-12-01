@@ -1,0 +1,9 @@
+  day_mode:
+    name: Day mode
+    options:
+     - Morning
+     - Day
+     - Evening
+     - Night
+    initial: Day
+    icon: mdi:white-balance-sunny

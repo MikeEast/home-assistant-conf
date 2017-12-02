@@ -16,68 +16,66 @@ http:
     - 127.0.0.1
     - 192.168.1.0/24
     - ::1
-  # ssl_certificate: !secret ssl_certificate
-  # ssl_key: !secret ssl_key
-
+ 
 updater:
 discovery:
 conversation:
 frontend:
 
-# ########################################
-# ###              LOGGING             ###
-# ########################################
+# # ########################################
+# # ###              LOGGING             ###
+# # ########################################
 
-recorder: !include recorder.yaml
-history: !include history.yaml
-logbook: !include logbook.yaml
-logger: !include logger.yaml
-sun:
+# recorder: !include recorder.yaml
+# history: !include history.yaml
+# logbook: !include logbook.yaml
+# logger: !include logger.yaml
+# sun:
 
-tts:
-  - platform: google
-
-########################################
-###               HUBS               ###
-########################################
-zwave:
-  usb_path: /dev/ttyACM0
-  new_entity_ids: true
-
+# tts:
+#   - platform: google
 
 # ########################################
-# ###              ENTITES             ###
+# ###               HUBS               ###
 # ########################################
+# zwave:
+#   usb_path: /dev/ttyACM0
+#   new_entity_ids: true
 
-verisure:
-  username: !secret verisure_id
-  password: !secret verisure_secret
 
-media_player: !include media_player.yaml
+# # ########################################
+# # ###              ENTITES             ###
+# # ########################################
 
-sensor: !include_dir_merge_list sensor
-binary_sensor: !include_dir_merge_list binary_sensors
-device_tracker: !include device_tracker.yaml
+# verisure:
+#   username: !secret verisure_id
+#   password: !secret verisure_secret
 
-zone:
-  - name: School
-    latitude: !secret school_lat
-    longitude: !secret school_lon
-    icon: mdi:code-braces
-    radius: 500
+# media_player: !include media_player.yaml
 
-  - name: Work
-    latitude: !secret work_lat
-    longitude: !secret work_lon
-    icon: mdi:briefcase
-    radius: 300
+# sensor: !include_dir_merge_list sensor
+# binary_sensor: !include_dir_merge_list binary_sensors
+# device_tracker: !include device_tracker.yaml
 
-# ########################################
-# ###             SERVICES             ###
-# ########################################
+# zone:
+#   - name: School
+#     latitude: !secret school_lat
+#     longitude: !secret school_lon
+#     icon: mdi:code-braces
+#     radius: 500
 
-automation: !include_dir_merge_list automation
-notify: !include notify.yaml
-python_script:
-script:
-group: !include_dir_merge_named group/
+#   - name: Work
+#     latitude: !secret work_lat
+#     longitude: !secret work_lon
+#     icon: mdi:briefcase
+#     radius: 300
+
+# # ########################################
+# # ###             SERVICES             ###
+# # ########################################
+
+# automation: !include_dir_merge_list automation
+# notify: !include notify.yaml
+# python_script:
+# script:
+# group: !include_dir_merge_named group/

@@ -22,60 +22,60 @@ discovery:
 conversation:
 frontend:
 
-# # ########################################
-# # ###              LOGGING             ###
-# # ########################################
+# ########################################
+# ###              LOGGING             ###
+# ########################################
 
-# recorder: !include recorder.yaml
-# history: !include history.yaml
-# logbook: !include logbook.yaml
-# logger: !include logger.yaml
-# sun:
+recorder: !include recorder.yaml
+history: !include history.yaml
+logbook: !include logbook.yaml
+logger: !include logger.yaml
+sun:
 
-# tts:
-#   - platform: google
+tts:
+  - platform: google
+
+########################################
+###               HUBS               ###
+########################################
+zwave:
+  usb_path: /dev/ttyACM0
+  new_entity_ids: true
+
 
 # ########################################
-# ###               HUBS               ###
+# ###              ENTITES             ###
 # ########################################
-# zwave:
-#   usb_path: /dev/ttyACM0
-#   new_entity_ids: true
 
+verisure:
+  username: !secret verisure_id
+  password: !secret verisure_secret
 
-# # ########################################
-# # ###              ENTITES             ###
-# # ########################################
+media_player: !include media_player.yaml
 
-# verisure:
-#   username: !secret verisure_id
-#   password: !secret verisure_secret
+sensor: !include_dir_merge_list sensor
+binary_sensor: !include_dir_merge_list binary_sensors
+device_tracker: !include device_tracker.yaml
 
-# media_player: !include media_player.yaml
+zone:
+  - name: School
+    latitude: !secret school_lat
+    longitude: !secret school_lon
+    icon: mdi:code-braces
+    radius: 500
 
-# sensor: !include_dir_merge_list sensor
-# binary_sensor: !include_dir_merge_list binary_sensors
-# device_tracker: !include device_tracker.yaml
+  - name: Work
+    latitude: !secret work_lat
+    longitude: !secret work_lon
+    icon: mdi:briefcase
+    radius: 300
 
-# zone:
-#   - name: School
-#     latitude: !secret school_lat
-#     longitude: !secret school_lon
-#     icon: mdi:code-braces
-#     radius: 500
+# ########################################
+# ###             SERVICES             ###
+# ########################################
 
-#   - name: Work
-#     latitude: !secret work_lat
-#     longitude: !secret work_lon
-#     icon: mdi:briefcase
-#     radius: 300
-
-# # ########################################
-# # ###             SERVICES             ###
-# # ########################################
-
-# automation: !include_dir_merge_list automation
-# notify: !include notify.yaml
-# python_script:
-# script:
-# group: !include_dir_merge_named group/
+automation: !include_dir_merge_list automation
+notify: !include notify.yaml
+python_script:
+script:
+group: !include_dir_merge_named group/

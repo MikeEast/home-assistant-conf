@@ -1,0 +1,8 @@
+#########################################
+######            SWITCH           ######
+#########################################
+
+    switch.sovrum:
+      hidden: false
+      friendly_name: Sovrumsslingan
+      homebridge_visible: true

@@ -56,6 +56,12 @@ sensor: !include_dir_merge_list sensor
 binary_sensor: !include_dir_merge_list binary_sensors
 device_tracker: !include device_tracker.yaml
 
+camera:
+  - platform: mjpeg
+    name: Livingroom Camera
+    still_image_url: http://192.168.1.105/image.jpg
+    mjpeg_url: http://192.168.1.105/video/mjpg.cgi
+
 zone:
   - name: School
     latitude: !secret school_lat

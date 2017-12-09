@@ -4,9 +4,11 @@
     media_player.badrum:
       friendly_name: Sonos Badrum
       homebridge_visible: true
+      
     media_player.kok:
       friendly_name: Sonos Kök
       homebridge_visible: true
+
     media_player.veranda:
       friendly_name: Sonos Veranda
       homebridge_visible: true

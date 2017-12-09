@@ -6,3 +6,18 @@
       hidden: false
       friendly_name: Sovrumsslingan
       homebridge_visible: true
+    
+    switch.trapperad_switch:
+      hidden: false
+      friendly_name: Trapperåd
+      homebridge_visible: true
+
+    switch.skafferad_switch:
+      hidden: false
+      friendly_name: Skafferåd
+      homebridge_visible: true
+    
+    switch.pluggen_switch:
+      hidden: false
+      friendly_name: Pluggen
+      homebridge_visible: true

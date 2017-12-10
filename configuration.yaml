@@ -46,6 +46,7 @@ zwave:
 # ###              ENTITES             ###
 # ########################################
 
+alert: !include alert.yaml
 verisure:
   username: !secret verisure_id
   password: !secret verisure_secret

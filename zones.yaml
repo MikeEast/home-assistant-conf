@@ -1,0 +1,11 @@
+  - name: School
+    latitude: !secret school_lat
+    longitude: !secret school_lon
+    icon: mdi:code-braces
+    radius: 500
+
+  - name: Work
+    latitude: !secret work_lat
+    longitude: !secret work_lon
+    icon: mdi:briefcase
+    radius: 300

@@ -50,30 +50,12 @@ verisure:
   username: !secret verisure_id
   password: !secret verisure_secret
 
-media_player: !include media_player.yaml
-
+media_player: !include media_players.yaml
 sensor: !include_dir_merge_list sensor
 binary_sensor: !include_dir_merge_list binary_sensors
 device_tracker: !include device_tracker.yaml
-
-camera:
-  - platform: mjpeg
-    name: Livingroom Camera
-    still_image_url: http://192.168.1.105/image.jpg
-    mjpeg_url: http://192.168.1.105/video/mjpg.cgi
-
-zone:
-  - name: School
-    latitude: !secret school_lat
-    longitude: !secret school_lon
-    icon: mdi:code-braces
-    radius: 500
-
-  - name: Work
-    latitude: !secret work_lat
-    longitude: !secret work_lon
-    icon: mdi:briefcase
-    radius: 300
+camera: !include cameras.yaml  
+zone: !include zones.yaml
 
 # ########################################
 # ###             SERVICES             ###
@@ -82,5 +64,4 @@ zone:
 automation: !include_dir_merge_list automation
 notify: !include notify.yaml
 python_script:
-script:
 group: !include_dir_merge_named group/

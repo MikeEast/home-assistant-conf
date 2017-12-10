@@ -1,0 +1,6 @@
+    device_tracker.micke:
+      icon: mdi:cellphone-iphone
+      homebridge_visible: true
+    device_tracker.hanna:
+      icon: mdi:cellphone-iphone
+      homebridge_visible: true

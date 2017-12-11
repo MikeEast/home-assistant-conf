@@ -40,4 +40,4 @@
   action:
     - service: switch.turn_off
       data:
-        enitity_id: switch.skafferad_switch
+        enitity_id: switch.trapperad_switch

@@ -12,8 +12,7 @@
     - service: notify.ios_mickes_iphone
       data:
         message: "request_location_update"
-    - service: python_script.device_tracker_placeholders
-    - service: python_script.summary
+    - service: python_script.device_tracker_placeholders    
 
 - alias: 'Hass Ready'
   initial_state: 'on'

@@ -18,6 +18,7 @@ http:
     - ::1
 updater:
 discovery:
+ios:
 conversation:
 
 # ########################################

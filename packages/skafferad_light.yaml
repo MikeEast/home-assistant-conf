@@ -4,7 +4,7 @@ homeassistant:
       friendly_name: Skafferådstrip          
 
 group:
-  trapperad_lights:
+  skafferad_lights:
     name: Skafferådlampan
     icon: mdi:spotlight-beam    
     entities:

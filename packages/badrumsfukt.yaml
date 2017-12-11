@@ -1,0 +1,26 @@
+homeassistant:
+  customize:
+    sensor.badrumsfukt_relative_humidity:
+      friendly_name: Badrumsfukt
+
+automation:
+  - alias: Badrumfläkten på
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.badrumsfukt_relative_humidity
+      above: 30
+    action:
+      - service: light.turn_on
+        data: 
+          enitity_id: light.badrumsflakt_level
+          brightness: 50
+  - alias: Badrumfläkten av
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.badrumsfukt_relative_humidity
+      below: 30
+    action:
+      - service: light.turn_off
+        data: 
+          enitity_id: light.badrumsflakt_level
+          brightness: 0

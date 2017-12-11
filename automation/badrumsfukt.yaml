@@ -12,7 +12,7 @@
 - action:
   - data:
       enitity_id: light.badrumsflakt_level
-    service: light.turn_on     
+    service: light.turn_off     
   alias: Badrumsfläkt på
   initial_state: '0'
   trigger:

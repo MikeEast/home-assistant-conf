@@ -7,7 +7,7 @@
   action:
     service: switch.turn_on
     - data:
-      enitity_id: switch.skafferad_switch
+        enitity_id: switch.skafferad_switch
 
 - alias: Skafferåd av
   trigger:
@@ -18,7 +18,7 @@
   action:
     service: switch.turn_off
     - data:
-      enitity_id: switch.skafferad_switch
+        enitity_id: switch.skafferad_switch
 
 - alias: Trapperåd på
   trigger:
@@ -29,7 +29,7 @@
   action:
     service: switch.turn_on
     - data:
-      enitity_id: switch.trapperad_switch         
+        enitity_id: switch.trapperad_switch         
 
 - alias: Trapperåd av
   trigger:
@@ -40,5 +40,5 @@
   action:
     service: switch.turn_off
     - data:
-      enitity_id: switch.skafferad_switch
+        enitity_id: switch.skafferad_switch
     

@@ -1,40 +1,43 @@
-- action: 
-    - data: 
+- alias: Skafferåd på   
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.skafferadstrip_sensor
+      from: 'off'
+      to: 'on'    
+  action:
+    - service: switch.turn_on
+      data:
         enitity_id: switch.skafferad_switch
-      service: switch.turn_on
-  alias: "Skafferåd på"
-  trigger: 
-    - entity_id: binary_sensor.skafferadstrip_sensor
-      from: "off"
-      platform: state
-      to: "on"
-- action: 
-    - data: 
+
+- alias: Skafferåd av
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.skafferadstrip_sensor
+      from: 'on'
+      to: 'off'    
+  action:
+    - service: switch.turn_off
+      data:
         enitity_id: switch.skafferad_switch
-      service: switch.turn_off
-  alias: "Skafferåd av"
-  trigger: 
-    - entity_id: binary_sensor.skafferadstrip_sensor
-      from: "on"
-      platform: state
-      to: "off"
-- action: 
-    - data: 
-        enitity_id: switch.trapperad_switch
-      service: switch.turn_on
-  alias: "Trapperåd på"
-  trigger: 
-    - entity_id: binary_sensor.trapperadstrip_sensor
-      from: "off"
-      platform: state
-      to: "on"
-- action: 
-    - data: 
+
+- alias: Trapperåd på
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.trapperadstrip_sensor
+      from: 'off'
+      to: 'on'    
+  action:
+    - service: switch.turn_on
+      data:
+        enitity_id: switch.trapperad_switch         
+
+- alias: Trapperåd av
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.trapperadstrip_sensor
+      from: 'on'
+      to: 'off'    
+  action:
+    - service: switch.turn_off
+      data:
         enitity_id: switch.skafferad_switch
-      service: switch.turn_off
-  alias: "Trapperåd av"
-  trigger: 
-    - entity_id: binary_sensor.trapperadstrip_sensor
-      from: "on"
-      platform: state
-      to: "off"

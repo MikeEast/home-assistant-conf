@@ -5,8 +5,8 @@ homeassistant:
 
 group:
   trapperad_lights:
-    name: Trapperåd lights
-    icon: mdi:spotlight-beam
+    name: Trapperådlampan
+    icon: mdi:spotlight-beam    
     entities:
       - switch.trapperad_switch
 

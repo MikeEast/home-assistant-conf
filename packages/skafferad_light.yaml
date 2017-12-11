@@ -1,0 +1,33 @@
+homeassistant:
+  customize:
+    binary_sensor.trapperadstrip_sensor:
+      friendly_name: Skafferådstrip          
+
+group:
+  trapperad_lights:
+    name: Skafferådlampan
+    icon: mdi:spotlight-beam    
+    entities:
+      - switch.skafferad_switch
+
+automation:
+
+  - alias: Light Skafferåd Door Activation
+    trigger:
+      platform: state
+      entity_id: binary_sensor.skafferadstrip_sensor
+      from: 'off'
+      to: 'on'
+    action:
+      - service: switch.turn_on
+        entity_id: group.skafferad_lights          
+
+  - alias: Light Skafferåd Door Restore
+    trigger:
+      platform: state
+      entity_id: binary_sensor.skafferadstrip_sensor
+      from: 'on'
+      to: 'off'    
+    action:
+      - service: switch.turn_off
+        entity_id: group.skafferad_lights

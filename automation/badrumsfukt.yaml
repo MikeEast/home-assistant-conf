@@ -1,10 +1,21 @@
-  - alias: Badrumsfläkt på
-    hide_entity: True
-    initial_state: '0'
-    trigger:
-      platform: numeric_state
-      entity_id: sensor.badrumsfukt_relative_humidity
-      above: 50
-    action:
-      service: light.turn_on
-      enitity_id: light.badrumsflakt_level
+- alias: Badrumsfläkt på
+  hide_entity: True
+  initial_state: '0'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.badrumsfukt_relative_humidity
+    above: 50
+  action:
+    service: light.turn_on
+    enitity_id: light.badrumsflakt_level
+
+- alias: Badrumsfläkt av
+  hide_entity: True
+  initial_state: '0'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.badrumsfukt_relative_humidity
+    below: 50
+  action:
+    service: light.turn_off
+    enitity_id: light.badrumsflakt_level

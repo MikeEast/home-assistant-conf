@@ -7,11 +7,11 @@
       - device_tracker
   exclude:
     domains:
-  #     - camera
-  #     - media_player
+      - camera
+      - media_player
       - sun
-  #     - calendar
-  #     - sensor
+      - calendar
+      - sensor
       - group
     entities:
       - sensor.since_last_boot

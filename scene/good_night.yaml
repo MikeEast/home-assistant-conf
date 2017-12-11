@@ -1,0 +1,4 @@
+  - name: God natt
+    entities:
+      switch.sovrum:
+        state: off

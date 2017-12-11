@@ -1,0 +1,4 @@
+  - name: God morgon
+    entities:
+      switch.sovrum:
+        state: on

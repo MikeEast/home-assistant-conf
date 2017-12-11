@@ -1,0 +1,33 @@
+homeassistant:
+  customize:
+    binary_sensor.trapperadstrip_sensor:
+      friendly_name: Trapperådstrip          
+
+group:
+  trapperad_lights:
+    name: Trapperåd lights
+    icon: mdi:spotlight-beam
+    entities:
+      - switch.trapperad_switch
+
+automation:
+
+  - alias: Light Trapperåd Door Activation
+    trigger:
+      platform: state
+      entity_id: binary_sensor.trapperadstrip_sensor
+      from: 'off'
+      to: 'on'
+    action:
+      - service: switch.turn_on
+        entity_id: group.trapperad_lights          
+
+  - alias: Light Trapperåd Door Restore
+    trigger:
+      platform: state
+      entity_id: binary_sensor.trapperadstrip_sensor
+      from: 'on'
+      to: 'off'    
+    action:
+      - service: switch.turn_on
+        entity_id: group.trapperad_lights

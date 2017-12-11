@@ -1,0 +1,4 @@
+  - name: Välkommen hem
+    entities:
+      switch.sovrum:
+        state: on

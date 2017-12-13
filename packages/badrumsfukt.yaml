@@ -12,7 +12,8 @@ automation:
     action:
       - service: light.turn_on
         data: 
-          enitity_id: light.badrumsflakt_level          
+          enitity_id: light.badrumsflakt_level
+          brightness: 200
   - alias: Badrumfläkten av
     trigger:
       platform: numeric_state
@@ -21,4 +22,5 @@ automation:
     action:
       - service: light.turn_off
         data: 
-          enitity_id: light.badrumsflakt_level          
+          enitity_id: light.badrumsflakt_level
+          brightness: 0

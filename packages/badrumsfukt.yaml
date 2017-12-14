@@ -8,7 +8,8 @@ automation:
     trigger:
       platform: numeric_state
       entity_id: sensor.badrumsfukt_relative_humidity
-      above: 30
+      above: 45
+      below: 100
     action:
       - service: light.turn_on
         data: 
@@ -18,9 +19,9 @@ automation:
     trigger:
       platform: numeric_state
       entity_id: sensor.badrumsfukt_relative_humidity
-      below: 30
+      above: 0
+      below: 45      
     action:
       - service: light.turn_off
         data: 
           enitity_id: light.badrumsflakt_level
-          brightness: 0

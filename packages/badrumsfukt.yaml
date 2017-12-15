@@ -4,6 +4,7 @@ homeassistant:
       friendly_name: Badrumsfukt
 
 automation:
+
   - alias: Badrumfläkten på
     trigger:
       platform: numeric_state
@@ -14,6 +15,7 @@ automation:
         data: 
           entity_id: light.badrumsflakt_level
           brightness: 200
+
   - alias: Badrumfläkten av
     trigger:
       platform: numeric_state

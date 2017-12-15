@@ -8,20 +8,20 @@ automation:
     trigger:
       platform: numeric_state
       entity_id: sensor.badrumsfukt_relative_humidity
-      above: 45
-      below: 100
+      value_template: '{{ sensor.badrumsfukt_relative_humidity - sensor.hallway_upstairs_humidity }}'
+      above: 10
     action:
-      - service: light.turn_on
+      - service: homeassistant.turn_on
         data: 
-          enitity_id: light.badrumsflakt_level
+          entity_id: light.badrumsflakt_level
           brightness: 200
   - alias: Badrumfläkten av
     trigger:
       platform: numeric_state
       entity_id: sensor.badrumsfukt_relative_humidity
-      above: 0
-      below: 45      
+      value_template: '{{ sensor.badrumsfukt_relative_humidity - sensor.hallway_upstairs_humidity }}'
+      below: 5      
     action:
       - service: light.turn_off
         data: 
-          enitity_id: light.badrumsflakt_level
+          entity_id: light.badrumsflakt_level

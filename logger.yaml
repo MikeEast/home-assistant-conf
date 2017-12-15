@@ -1,21 +1,21 @@
-default: debug
+default: warn
 logs:
-  # homeassistant.core: warn
-  # homeassistant.components.automation: debug
-  # homeassistant.components.sensor.command_line: fatal
-  # homeassistant.components.binary_sensor: debug  
-  # homeassistant.components.python_script: debug
-  # homeassistant.components.api: error
-  # homeassistant.components.device_tracker: warn
-  # homeassistant.components.discovery: warn
-  # homeassistant.components.http: error
-  # homeassistant.components.media_player: error
-  # homeassistant.components.zwave: error
-  # homeassistant.components.zwave.util: error
-  # homeassistant.components.notify: error
-  # homeassistant.helpers.script: info
-  # homeassistant.components.light: warn
-  # homeassistant.helpers.entity: error
-  # homeassistant.components.ffmpeg: debug
-  # homeassistant.components.ffmpeg_motion: debug  
-  # root: warn
+  homeassistant.core: warn
+  homeassistant.components.automation: debug
+  homeassistant.components.sensor.command_line: warn
+  homeassistant.components.binary_sensor: debug  
+  homeassistant.components.python_script: debug
+  homeassistant.components.api: warn
+  homeassistant.components.device_tracker: warn
+  homeassistant.components.discovery: warn
+  homeassistant.components.http: warn
+  homeassistant.components.media_player: warn
+  homeassistant.components.zwave: warn
+  homeassistant.components.zwave.util: warn
+  homeassistant.components.notify: warn
+  homeassistant.helpers.script: info
+  homeassistant.components.light: warn
+  homeassistant.helpers.entity: warn
+  homeassistant.components.ffmpeg: debug
+  homeassistant.components.ffmpeg_motion: debug  
+  root: warn

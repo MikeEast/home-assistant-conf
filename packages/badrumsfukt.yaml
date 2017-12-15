@@ -5,7 +5,7 @@ homeassistant:
 
 automation:
 
-  - alias: Badrumfläkten på
+  - alias: Badrumsfläkten på
     trigger:
       platform: numeric_state
       entity_id: sensor.badrumsfukt_relative_humidity
@@ -15,8 +15,12 @@ automation:
         data: 
           entity_id: light.badrumsflakt_level
           brightness: 200
+      - service: notify.ios_mickes_iphone
+        data:
+          title: 'Fukt!'
+          message: 'Startar Badrumsfläkten'          
 
-  - alias: Badrumfläkten av
+  - alias: Badrumsfläkten av
     trigger:
       platform: numeric_state
       entity_id: sensor.badrumsfukt_relative_humidity      

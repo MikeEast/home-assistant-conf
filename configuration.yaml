@@ -70,6 +70,7 @@ zone: !include zones.yaml
 # ###             SERVICES             ###
 # ########################################
 
+alexa:
 automation: !include_dir_merge_list automation
 notify: !include notify.yaml
 python_script:

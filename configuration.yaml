@@ -21,6 +21,10 @@ discovery:
 ios:
 conversation:
 
+duckdns:
+  domain: mikeeast
+  access_token: !secret duckdns_token
+
 # ########################################
 # ###                GUI               ###
 # ########################################

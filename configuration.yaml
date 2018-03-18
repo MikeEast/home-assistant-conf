@@ -50,6 +50,7 @@ tts:
 
 emulated_hue:
 
+
 zwave:
   usb_path: /dev/ttyACM0
   new_entity_ids: true

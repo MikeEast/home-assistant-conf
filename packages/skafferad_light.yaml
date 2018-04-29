@@ -1,6 +1,6 @@
 homeassistant:
   customize:
-    binary_sensor.sensor:
+    binary_sensor.sensor_2:
       friendly_name: Skafferådstrip          
 
 group:
@@ -15,7 +15,7 @@ automation:
   - alias: Light Skafferåd Door Activation
     trigger:
       platform: state
-      entity_id: binary_sensor.sensor
+      entity_id: binary_sensor.sensor_2
       from: 'off'
       to: 'on'
     action:
@@ -25,7 +25,7 @@ automation:
   - alias: Light Skafferåd Door Restore
     trigger:
       platform: state
-      entity_id: binary_sensor.sensor
+      entity_id: binary_sensor.sensor_2
       from: 'on'
       to: 'off'    
     action:

@@ -1,6 +1,6 @@
 homeassistant:
   customize:
-    binary_sensor.trapperadstrip_sensor:
+    binary_sensor.skafferadstrip_sensor:
       friendly_name: Skafferådstrip          
 
 group:

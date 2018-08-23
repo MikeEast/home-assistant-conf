@@ -9,7 +9,7 @@ automation:
     trigger:
       platform: numeric_state
       entity_id: sensor.badrumsfukt_relative_humidity
-      above: 60
+      above: 65
     action:
       - service: homeassistant.turn_on
         data: 

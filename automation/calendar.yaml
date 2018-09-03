@@ -1,0 +1,12 @@
+- alias: Remind the kids 
+  trigger:
+    platform: state
+    entity_id:
+      - calendar.filippainloopse
+      - calendar.lovisainloopse
+    state: 'on'
+  action: 
+    - service: notify.ios_mickes_iphone
+      data:
+        title: 'Filippa!'
+        message: 'Test'  

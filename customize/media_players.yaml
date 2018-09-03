@@ -7,3 +7,13 @@
     media_player.veranda:
       friendly_name: Sonos Veranda
       homebridge_visible: true
+
+  group:  
+  media_players:
+    view: yes
+    name: Media Players
+    icon: mdi:movie
+    entities:
+      - media_player.badrum
+      - media_player.kok
+      - media_player.veranda

@@ -1,5 +1,4 @@
-homeassistant:
-  customize:
+
     media_player.badrum:
       friendly_name: Sonos Badrum
       homebridge_visible: true      

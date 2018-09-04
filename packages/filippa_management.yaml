@@ -21,13 +21,4 @@ automation:
           title: 'Fukt!'
           message: 'Startar Badrumsfläkten'          
 
-  - alias: Badrumsfläkten av
-    trigger:
-      platform: numeric_state
-      entity_id: sensor.badrumsfukt_relative_humidity      
-      below: 60
-    action:
-      - service: homeassistant.turn_on
-        data: 
-          entity_id: light.badrumsflakt_level
-          brightness: 50
+  

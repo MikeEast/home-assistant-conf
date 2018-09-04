@@ -4,12 +4,6 @@ input_boolean:
     initial: off
     icon: mdi:car
 
-input_boolean:
-  test_trigger2:
-    name: This is another test trigger
-    initial: off
-    icon: mdi:car    
-
 automation:
   - alias: Filippa till aktiviteter
     trigger:
@@ -18,6 +12,7 @@ automation:
       from: 'False'
       to: 'True'
     action:      
-      - service: input_boolean.turn_on
+      - service: notify.ios_mickes_iphone
         data:
-          entity_id: input_boolean.test_trigger2
+          title: 'Hello!'
+          message: 'Påminned Flipps'       

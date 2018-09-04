@@ -26,5 +26,7 @@ automation:
       entity_id: sensor.badrumsfukt_relative_humidity      
       below: 60
     action:
-      - service: homeassistant.turn_off
-        entity_id: light.badrumsflakt_level
+      - service: homeassistant.turn_on
+        data: 
+          entity_id: light.badrumsflakt_level
+          brightness: 50

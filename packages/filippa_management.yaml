@@ -2,7 +2,13 @@ input_boolean:
   test_trigger:
     name: This is a test trigger
     initial: off
-    icon: mdi:car  
+    icon: mdi:car
+
+input_boolean:
+  test_trigger2:
+    name: This is another test trigger
+    initial: off
+    icon: mdi:car    
 
 automation:
 
@@ -12,9 +18,6 @@ automation:
       entity_id: input_boolean.test_trigger
       state: 'on'
     action:      
-      - service: notify.ios_mickes_iphone
+      - service: input_boolean.turn_on
         data:
-          title: 'Fukt!'
-          message: 'Startar Badrumsfläkten'          
-
-  
+          entity_id: input_boolean.test_trigger2

@@ -1,9 +1,8 @@
-homeassistant:
-  input_boolean:
-    test_trigger:
-      name: This is a test trigger
-      initial: off
-      icon: mdi:car
+input_boolean:
+  test_trigger:
+    name: This is a test trigger
+    initial: off
+    icon: mdi:car  
 
 automation:
 

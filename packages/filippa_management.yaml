@@ -1,0 +1,34 @@
+homeassistant:
+  input_boolean:
+    test_trigger:
+      name: This is a test trigger
+      initial: off
+      icon: mdi:car
+
+automation:
+
+  - alias: Filippa till aktiviteter
+    trigger:
+      platform: state
+      entity_id: sensor.test_trigger
+      state: 'on'
+    action:
+      - service: homeassistant.turn_on
+        data: 
+          entity_id: light.badrumsflakt_level
+          brightness: 200
+      - service: notify.ios_mickes_iphone
+        data:
+          title: 'Fukt!'
+          message: 'Startar Badrumsfläkten'          
+
+  - alias: Badrumsfläkten av
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.badrumsfukt_relative_humidity      
+      below: 60
+    action:
+      - service: homeassistant.turn_on
+        data: 
+          entity_id: light.badrumsflakt_level
+          brightness: 50

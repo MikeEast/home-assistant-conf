@@ -11,12 +11,12 @@ input_boolean:
     icon: mdi:car    
 
 automation:
-
   - alias: Filippa till aktiviteter
     trigger:
       platform: state
       entity_id: input_boolean.test_trigger
-      state: 'on'
+      from: 'False'
+      to: 'True'
     action:      
       - service: input_boolean.turn_on
         data:

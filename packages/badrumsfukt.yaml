@@ -18,7 +18,7 @@ automation:
       - service: notify.ios_mickes_iphone
         data:
           title: 'Fukt!'
-          message: 'Startar Badrumsfläkten'          
+          message: 'Startar Badrumsfläkten'
 
   - alias: Badrumsfläkten av
     trigger:

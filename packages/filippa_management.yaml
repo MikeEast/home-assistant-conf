@@ -29,16 +29,14 @@ automation:
           volume: 0.2
           message: 'Aktivitet {{trigger.event.data.message}} och för övrigt anser jag {{trigger.event.data.description}}'
           delay: '00:00:02'
-   - alias: 'Leave Home notification'
-     trigger:
-       platform: zone
-       event: leave
-       zone: zone.home
-       entity_id: device_tracker.filippasiphone
-     condition:
-       condition: time
-       after: '20:00'
-     action:
-       service: notify.notify
-       data:
-         message: 'Paulus left the house'
+  - alias: 'Leave Home notification'
+    trigger:
+      platform: zone
+      event: leave
+      zone: zone.home
+      entity_id: device_tracker.filippasiphone    
+    action:
+      - service: notify.ios_mickes_iphone
+        data:
+          title: 'Filippa!'
+          message: 'Lämnar hemma'

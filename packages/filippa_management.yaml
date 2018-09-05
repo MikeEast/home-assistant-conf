@@ -27,7 +27,7 @@ automation:
         data:
           sonos_entity: media_player.bathroom
           volume: 0.2
-          message: 'Aktivitet {{trigger.event.data.message}} och för övrigt anser jag {{trigger.event.data.description}}'
+          message: 'Aktivitet {{ message }}'
           delay: '00:00:02'
   - alias: 'Leave Home notification'
     trigger:

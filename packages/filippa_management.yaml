@@ -13,7 +13,7 @@ automation:
     action:      
       - service: script.sonos_say
         data:
-          sonos_entity: group.sonos
+          sonos_entity: sonos.kitchen
           volume: 0.2
-          message: 'Hello'
+          message: 'God kväll'
           delay: '00:00:02'      

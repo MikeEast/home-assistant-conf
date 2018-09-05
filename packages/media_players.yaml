@@ -11,13 +11,14 @@ homeassistant:
       friendly_name: Sonos Veranda    
 
 group:  
-  media_players:
+  sonos:
     view: yes
     name: Sonos    
     entities:
       - media_player.kithen
       - media_player.vardagsrum
-      - media_player.veranda      
+      - media_player.veranda
+      - media_player.bathroom
 
 script:
   sonos_say:

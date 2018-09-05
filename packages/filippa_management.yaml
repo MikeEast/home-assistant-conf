@@ -5,7 +5,7 @@ input_boolean:
     icon: mdi:car
 
 automation:
-  - alias: Filippa till aktiviteter
+  - alias: Test
     trigger:
       platform: state
       entity_id: input_boolean.test_trigger      
@@ -16,4 +16,18 @@ automation:
           sonos_entity: media_player.bathroom
           volume: 0.2
           message: 'God kväll'
-          delay: '00:00:02'      
+          delay: '00:00:02'
+    
+automation:
+  - alias: Filippa till aktiviteter
+    trigger:
+      platform: state
+      entity_id: calendar.filippainloopse      
+      to: 'on'
+    action:      
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.bathroom
+          volume: 0.2
+          message: 'Aktivitet'
+          delay: '00:00:02'

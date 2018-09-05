@@ -2,10 +2,34 @@
     latitude: !secret school_lat
     longitude: !secret school_lon
     icon: mdi:code-braces
-    radius: 200
+    radius: 100
 
   - name: Work
     latitude: !secret work_lat
     longitude: !secret work_lon
     icon: mdi:briefcase
+    radius: 100
+  
+  - name: Pool
+    latitude: !secret pool_lat
+    longitude: !secret pool_lon
+    icon: mdi:pool
+    radius: 100
+  
+  - name: Dance
+    latitude: !secret dance_lat
+    longitude: !secret dance_lon
+    icon: mdi:artist
+    radius: 100
+
+  - name: Bridge
+    latitude: !secret bridge_lat
+    longitude: !secret bridge_lon
+    icon: mdi:bridge
+    radius: 200
+
+  - name: Highway
+    latitude: !secret highway_lat
+    longitude: !secret highway_lon
+    icon: mdi:highway
     radius: 200

@@ -11,11 +11,13 @@ automation:
       entity_id: input_boolean.test_trigger      
       to: 'on'
     action:      
-      - service: tts.google_say
-        entity_id: media_player.badrum
+      - service: script.sonos_say
         data:
-          message: 'May the Force be with you.'
+          sonos_entity: media_player.kitchen
+          volume: 0.2
+          message: 'Hello'
+          delay: '00:00:02'
       - service: notify.ios_mickes_iphone
         data:
           title: 'Hello!'
-          message: 'Påminned Flipps'
+          message: 'Påminn Flipps'

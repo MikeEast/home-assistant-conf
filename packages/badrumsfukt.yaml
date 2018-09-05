@@ -29,4 +29,4 @@ automation:
       - service: homeassistant.turn_on
         data: 
           entity_id: light.badrumsflakt_level
-          brightness: 50
+          brightness: 100

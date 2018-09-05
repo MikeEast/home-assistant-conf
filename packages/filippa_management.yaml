@@ -13,11 +13,7 @@ automation:
     action:      
       - service: script.sonos_say
         data:
-          sonos_entity: media_player.kitchen
+          sonos_entity: group.sonos
           volume: 0.2
           message: 'Hello'
-          delay: '00:00:02'
-      - service: notify.ios_mickes_iphone
-        data:
-          title: 'Hello!'
-          message: 'Påminn Flipps'
+          delay: '00:00:02'      

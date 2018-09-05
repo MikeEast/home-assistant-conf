@@ -37,6 +37,7 @@ script:
        data_template:
          entity_id: "{{ sonos_entity }}"
          message: "{{ message }}"
+         language: 'sv'
      - delay: "{{ delay }}"
      - service: media_player.sonos_restore
        data_template:

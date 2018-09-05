@@ -13,7 +13,7 @@ automation:
     action:      
       - service: script.sonos_say
         data:
-          sonos_entity: media_player.kitchen
+          sonos_entity: media_player.bathroom
           volume: 0.2
           message: 'God kväll'
           delay: '00:00:02'      

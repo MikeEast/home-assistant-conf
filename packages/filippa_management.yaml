@@ -43,14 +43,14 @@ automation:
   - alias: 'Get the kids to school'
     trigger:
       platform: time
-      hours: 8
-      minutes: 15
+      hours: 7
+      minutes: 50
       seconds: 0    
     action:
       - service: script.sonos_say
         data:
-          sonos_entity: media_player.bathroom
-          volume: 0.3
-          message: 'Det är nu tio minuter till skolan börjar'
+          sonos_entity: media_player.kitchen
+          volume: 0.4
+          message: 'Det är nu tio minuter till skolan börjar! Nu måste ni gå!'
           delay: '00:00:05'
      

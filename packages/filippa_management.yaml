@@ -40,3 +40,17 @@ automation:
         data:
           title: 'Filippa!'
           message: 'Lämnar hemma'
+  - alias: 'Get the kids to school'
+    trigger:
+      platform: time
+      hours: 7
+      minutes: 58
+      seconds: 0    
+    action:
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.3
+          message: 'Det är nu tio minuter till skolan börjar'
+          delay: '00:00:02'
+     

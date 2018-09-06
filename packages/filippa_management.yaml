@@ -43,14 +43,18 @@ automation:
   - alias: 'Get the kids to school'
     trigger:
       platform: time
-      hours: 7
-      minutes: 58
-      seconds: 0    
+      hours: 8
+      minutes: 03
+      seconds: 0
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.workday_sensor
+        state: 'on'
     action:
       - service: script.sonos_say
         data:
-          sonos_entity: media_player.kitchen
+          sonos_entity: media_player.bathroom
           volume: 0.3
           message: 'Det är nu tio minuter till skolan börjar'
-          delay: '00:00:02'
+          delay: '00:00:05'
      

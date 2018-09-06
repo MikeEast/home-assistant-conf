@@ -10,6 +10,10 @@ automation:
       platform: state
       entity_id: input_boolean.test_trigger      
       to: 'on'
+    conditions:
+      - condition: state
+        entity_id: 'binary_sensor.workday_sensor'
+        state: 'on'
     action:      
       - service: script.sonos_say
         data:
@@ -48,7 +52,7 @@ automation:
       seconds: 0
     conditions:
       - condition: state
-        entity_id: binary_sensor.workday_sensor
+        entity_id: 'binary_sensor.workday_sensor'
         state: 'on'
     action:
       - service: script.sonos_say

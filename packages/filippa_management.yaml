@@ -64,6 +64,19 @@ automation:
         data:
           sonos_entity: media_player.kitchen
           volume: 0.4
-          message: 'Det är nu tjugo minuter till skolan börjar! Nu måste ni gå!'
+          message: 'Det är nu tjugo minuter till skolan börjar!'
+          delay: '00:00:05'
+  - alias: 'Get the kids to school #3'
+    trigger:
+      platform: time
+      hours: 7
+      minutes: 50
+      seconds: 0    
+    action:
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.4
+          message: 'Det är nu tio minuter till skolan börjar! Nu måste ni gå!'
           delay: '00:00:05'
      

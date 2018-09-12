@@ -29,17 +29,50 @@ automation:
           volume: 0.2
           message: 'Aktivitet {{ message }}'
           delay: '00:00:02'
-  - alias: 'Leave Home notification'
+  - alias: 'Arrive pool notification'
     trigger:
       platform: zone
-      event: leave
-      zone: zone.home
+      event: enter
+      zone: zone.pool
       entity_id: device_tracker.filippasiphone    
     action:
       - service: notify.ios_mickes_iphone
         data:
           title: 'Filippa!'
-          message: 'Lämnar hemma'
+          message: 'Har kommit till simningen'
+  - alias: 'Leave pool notification'
+    trigger:
+      platform: zone
+      event: leave
+      zone: zone.pool
+      entity_id: device_tracker.filippasiphone    
+    action:
+      - service: notify.ios_mickes_iphone
+        data:
+          title: 'Filippa!'
+          message: 'Lämnar simningen'
+  - alias: 'Arrive dance notification'
+    trigger:
+      platform: zone
+      event: enter
+      zone: zone.dance
+      entity_id: device_tracker.filippasiphone    
+    action:
+      - service: notify.ios_mickes_iphone
+        data:
+          title: 'Filippa!'
+          message: 'Har kommit till dansen'
+  - alias: 'Leave dance notification'
+    trigger:
+      platform: zone
+      event: leave
+      zone: zone.dance
+      entity_id: device_tracker.filippasiphone    
+    action:
+      - service: notify.ios_mickes_iphone
+        data:
+          title: 'Filippa!'
+          message: 'Lämnar dansen'
   - alias: 'Get the kids to school #1'
     trigger:
       platform: time

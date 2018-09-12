@@ -5,6 +5,11 @@ automation:
       event: enter
       zone: zone.bridge
       entity_id: device_tracker.micke    
+    condition:
+      condition: time
+      # At least one of the following is required.
+      after: '15:00:00'
+      before: '20:00:00'    
     action:
       - service: script.sonos_say
         data:
@@ -17,7 +22,12 @@ automation:
       platform: zone
       event: enter
       zone: zone.highway
-      entity_id: device_tracker.micke    
+      entity_id: device_tracker.micke
+    condition:
+      condition: time
+      # At least one of the following is required.
+      after: '15:00:00'
+      before: '20:00:00'    
     action:
       - service: script.sonos_say
         data:

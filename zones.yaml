@@ -26,10 +26,10 @@
     latitude: !secret bridge_lat
     longitude: !secret bridge_lon
     icon: mdi:bridge
-    radius: 200
+    radius: 400
 
   - name: Highway
     latitude: !secret highway_lat
     longitude: !secret highway_lon
     icon: mdi:highway
-    radius: 200
+    radius: 400

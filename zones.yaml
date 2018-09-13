@@ -14,13 +14,13 @@
     latitude: !secret pool_lat
     longitude: !secret pool_lon
     icon: mdi:pool
-    radius: 100
+    radius: 200
   
   - name: Dance
     latitude: !secret dance_lat
     longitude: !secret dance_lon
     icon: mdi:artist
-    radius: 100
+    radius: 200
 
   - name: Bridge
     latitude: !secret bridge_lat

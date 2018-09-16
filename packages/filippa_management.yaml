@@ -17,6 +17,7 @@ automation:
           volume: 0.2
           message: 'God kväll'
           delay: '00:00:02'
+
   - alias: Filippa till aktiviteter
     trigger:
       platform: state
@@ -29,6 +30,7 @@ automation:
           volume: 0.2
           message: 'Aktivitet {{ message }}'
           delay: '00:00:02'
+
   - alias: 'Arrive pool notification'
     trigger:
       platform: zone
@@ -40,6 +42,7 @@ automation:
         data:
           title: 'Filippa!'
           message: 'Har kommit till simningen'
+
   - alias: 'Leave pool notification'
     trigger:
       platform: zone
@@ -51,6 +54,7 @@ automation:
         data:
           title: 'Filippa!'
           message: 'Lämnar simningen'
+
   - alias: 'Arrive dance notification'
     trigger:
       platform: zone
@@ -62,6 +66,7 @@ automation:
         data:
           title: 'Filippa!'
           message: 'Har kommit till dansen'
+
   - alias: 'Leave dance notification'
     trigger:
       platform: zone
@@ -73,6 +78,7 @@ automation:
         data:
           title: 'Filippa!'
           message: 'Lämnar dansen'
+
   - alias: 'Get the kids to school #1'
     trigger:
       platform: time
@@ -82,7 +88,7 @@ automation:
     condition:
       condition: state
       entity_id: binary_sensor.workday_sensor
-      state: on
+      state: 'on'
     action:
       - service: script.sonos_say
         data:
@@ -90,6 +96,7 @@ automation:
           volume: 0.4
           message: 'Det är nu en halvtimma innan skolan börjar! Nu måste ni borsta tänder och packa saker!'
           delay: '00:00:05'
+
   - alias: 'Get the kids to school #2'
     trigger:
       platform: time
@@ -99,7 +106,7 @@ automation:
     condition:
       condition: state
       entity_id: binary_sensor.workday_sensor
-      state: on
+      state: 'on'
     action:
       - service: script.sonos_say
         data:
@@ -107,6 +114,7 @@ automation:
           volume: 0.4
           message: 'Det är nu tjugo minuter till skolan börjar!'
           delay: '00:00:05'
+          
   - alias: 'Get the kids to school #3'
     trigger:
       platform: time
@@ -116,7 +124,7 @@ automation:
     condition:
       condition: state
       entity_id: binary_sensor.workday_sensor
-      state: on
+      state: 'on'
     action:
       - service: script.sonos_say
         data:

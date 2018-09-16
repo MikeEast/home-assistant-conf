@@ -28,3 +28,25 @@ automation:
     action:
       - service: homeassistant.turn_off        
         entity_id: light.badrumsflakt_level        
+
+  - alias: Badrumsfläkten på on movement
+    trigger:
+      platform: state
+      entity_id: binary_sensor.light.badrumsflakt_level
+      to: 'on'
+    action:
+      - service: homeassistant.turn_on
+        data: 
+          entity_id: light.badrumsflakt_level
+          brightness: 120
+
+  - alias: Badrumsfläkten av efter 10 minuter
+    trigger:
+      platform: state
+      entity_id: binary_sensor.badrumsfukt_sensor
+      to: 'off'
+      for:
+        minutes: 10
+    action:
+      - service: homeassistant.turn_off
+        entity_id: light.badrumsflakt_level

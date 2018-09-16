@@ -32,7 +32,7 @@ automation:
   - alias: Badrumsfläkten på on movement
     trigger:
       platform: state
-      entity_id: binary_sensor.light.badrumsflakt_level
+      entity_id: binary_sensor.badrumsfukt_sensor
       to: 'on'
     action:
       - service: homeassistant.turn_on

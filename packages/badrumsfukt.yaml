@@ -36,7 +36,7 @@ automation:
       to: 'on'
     condition: 
       condition: state
-      entity_id: binary_sensor.badrumsflakt_level
+      entity_id: light.badrumsflakt_level
       state: 'off'
     action:
       - service: homeassistant.turn_on

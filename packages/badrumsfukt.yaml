@@ -23,17 +23,21 @@ automation:
   - alias: Badrumsfläkten av
     trigger:
       platform: numeric_state
-      entity_id: sensor.badrumsfukt_relative_humidity      
+      entity_id: sensor.badrumsfukt_relative_humidity
       below: 56
     action:
       - service: homeassistant.turn_off        
-        entity_id: light.badrumsflakt_level        
+        entity_id: light.badrumsflakt_level
 
   - alias: Badrumsfläkten på on movement
     trigger:
       platform: state
       entity_id: binary_sensor.badrumsfukt_sensor
       to: 'on'
+    condition: 
+      condition: state
+      entity_id: binary_sensor.badrumsflakt_level
+      state: 'off'
     action:
       - service: homeassistant.turn_on
         data: 

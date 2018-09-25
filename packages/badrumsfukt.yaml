@@ -35,9 +35,14 @@ automation:
       entity_id: binary_sensor.badrumsfukt_sensor
       to: 'on'
     condition: 
-      condition: state
-      entity_id: light.badrumsflakt_level
-      state: 'off'
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: light.badrumsflakt_level
+          state: 'off'
+        - condition: time
+          after: '08:00:00'
+          before: '23:00:00'
     action:
       - service: homeassistant.turn_on
         data: 

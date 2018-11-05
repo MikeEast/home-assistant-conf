@@ -42,6 +42,12 @@ automation:
         data:
           title: 'Filippa!'
           message: 'Har kommit till simningen'
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.4
+          message: 'Filippa har kommit till Tibblebadet!'
+          delay: '00:00:10'
 
   - alias: 'Leave pool notification'
     trigger:
@@ -54,6 +60,12 @@ automation:
         data:
           title: 'Filippa!'
           message: 'Lämnar simningen'
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.4
+          message: 'Filippa lämnar Tibblebadet!'
+          delay: '00:00:10'
 
   - alias: 'Arrive dance notification'
     trigger:
@@ -66,6 +78,12 @@ automation:
         data:
           title: 'Filippa!'
           message: 'Har kommit till dansen'
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.4
+          message: 'Filippa har kommit till Laisings!'
+          delay: '00:00:10'
 
   - alias: 'Leave dance notification'
     trigger:
@@ -78,6 +96,12 @@ automation:
         data:
           title: 'Filippa!'
           message: 'Lämnar dansen'
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.4
+          message: 'Filippa lämnar Laisings!'
+          delay: '00:00:10'
 
   - alias: 'Get the kids to school #1'
     trigger:
@@ -95,7 +119,7 @@ automation:
           sonos_entity: media_player.kitchen
           volume: 0.4
           message: 'Det är nu en halvtimma innan skolan börjar! Nu måste ni borsta tänder och packa saker!'
-          delay: '00:00:05'
+          delay: '00:00:10'
 
   - alias: 'Get the kids to school #2'
     trigger:
@@ -113,7 +137,7 @@ automation:
           sonos_entity: media_player.kitchen
           volume: 0.4
           message: 'Det är nu tjugo minuter till skolan börjar!'
-          delay: '00:00:05'
+          delay: '00:00:10'
           
   - alias: 'Get the kids to school #3'
     trigger:
@@ -131,5 +155,5 @@ automation:
           sonos_entity: media_player.kitchen
           volume: 0.4
           message: 'Det är nu tio minuter till skolan börjar! Nu måste ni gå!'
-          delay: '00:00:05'
+          delay: '00:00:10'
      

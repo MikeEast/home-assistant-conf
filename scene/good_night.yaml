@@ -2,5 +2,5 @@
     entities:
       switch.sovrum:
         state: off
-      light.badrumsflakt_level:
+      light.bathroom_fan_level:
         state: off

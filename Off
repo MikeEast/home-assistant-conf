@@ -5,7 +5,7 @@ Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
 	new file:   Off
-	modified:   automation/badrumsfukt.yaml
+	modified:   automation/bathroom_humidity.yaml
 	modified:   packages/trapparad_light.yaml
 
 Enter the Description for the Change:  [Minor Update]

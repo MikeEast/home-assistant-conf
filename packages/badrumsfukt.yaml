@@ -1,19 +1,19 @@
 homeassistant:
   customize:
-    sensor.badrumsfukt_relative_humidity:
-      friendly_name: Badrumsfukt
+    sensor.bathroom_humidity_relative_humidity:
+      friendly_name: bathroom_humidity
 
 automation:
 
   - alias: Badrumsfläkten på
     trigger:
       platform: numeric_state
-      entity_id: sensor.badrumsfukt_relative_humidity
+      entity_id: sensor.bathroom_humidity_relative_humidity
       above: 60
     action:
       - service: homeassistant.turn_on
         data: 
-          entity_id: light.badrumsflakt_level
+          entity_id: light.bathroom_fan_level
           brightness: 200
       - service: notify.ios_mickes_iphone
         data:
@@ -23,22 +23,22 @@ automation:
   - alias: Badrumsfläkten av
     trigger:
       platform: numeric_state
-      entity_id: sensor.badrumsfukt_relative_humidity
+      entity_id: sensor.bathroom_humidity_relative_humidity
       below: 56
     action:
       - service: homeassistant.turn_off        
-        entity_id: light.badrumsflakt_level
+        entity_id: light.bathroom_fan_level
 
   - alias: Badrumsfläkten på on movement
     trigger:
       platform: state
-      entity_id: binary_sensor.badrumsfukt_sensor
+      entity_id: binary_sensor.bathroom_humidity_sensor
       to: 'on'
     condition: 
       condition: and
       conditions:
         - condition: state
-          entity_id: light.badrumsflakt_level
+          entity_id: light.bathroom_fan_level
           state: 'off'
         - condition: time
           after: '08:00:00'
@@ -46,16 +46,16 @@ automation:
     action:
       - service: homeassistant.turn_on
         data: 
-          entity_id: light.badrumsflakt_level
+          entity_id: light.bathroom_fan_level
           brightness: 120
 
   - alias: Badrumsfläkten av efter 10 minuter
     trigger:
       platform: state
-      entity_id: binary_sensor.badrumsfukt_sensor
+      entity_id: binary_sensor.bathroom_humidity_sensor
       to: 'off'
       for:
         minutes: 10
     action:
       - service: homeassistant.turn_off
-        entity_id: light.badrumsflakt_level
+        entity_id: light.bathroom_fan_level

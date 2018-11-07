@@ -4,7 +4,7 @@ automation:
       platform: zone
       event: enter
       zone: zone.bridge
-      entity_id: device_tracker.micke        
+      entity_id: device_tracker.mickesiphone
     action:
       - service: notify.ios_mickes_iphone
         data:
@@ -21,7 +21,7 @@ automation:
       platform: zone
       event: enter
       zone: zone.highway
-      entity_id: device_tracker.micke    
+      entity_id: device_tracker.mickesiphone
     action:
       - service: notify.ios_mickes_iphone
         data:

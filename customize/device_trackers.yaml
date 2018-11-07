@@ -1,8 +1,8 @@
-    device_tracker.micke:
+    device_tracker.mickesiphone:
       icon: mdi:cellphone-iphone
       friendly_name: Micke
       homebridge_visible: true
-    device_tracker.hanna:
+    device_tracker.hannasiphone:
       icon: mdi:cellphone-iphone
       friendly_name: Hanna
       homebridge_visible: true

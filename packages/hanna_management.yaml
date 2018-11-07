@@ -1,0 +1,35 @@
+automation:
+  - alias: Mamma är på väg hem #1
+    trigger:
+      platform: zone
+      event: enter
+      zone: zone.bridge
+      entity_id: device_tracker.hannasiphone
+    action:
+      - service: notify.ios_mickes_iphone
+        data:
+          title: 'Hanna!'
+          message: 'Stocksundsbron'
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.4
+          message: 'Mamma passerar nu Stocksund i en rasande fart.'
+          delay: '00:00:05'
+  - alias: Mamma är på väg hem #2
+    trigger:
+      platform: zone
+      event: enter
+      zone: zone.highway
+      entity_id: device_tracker.hannasiphone
+    action:
+      - service: notify.ios_mickes_iphone
+        data:
+          title: 'Hanna!'
+          message: 'Karby gård'
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.4
+          message: 'Mamma passerar nu Karby gård i en rasande fart.'
+          delay: '00:00:10'

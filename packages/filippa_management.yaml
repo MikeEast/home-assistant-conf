@@ -156,4 +156,3 @@ automation:
           volume: 0.4
           message: 'Det är nu tio minuter till skolan börjar! Nu måste ni gå!'
           delay: '00:00:10'
-     

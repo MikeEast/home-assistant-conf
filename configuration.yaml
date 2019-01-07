@@ -46,6 +46,10 @@ logger: !include logger.yaml
 ###                 HUBS                ###
 ###########################################
 
+emulated_hue:
+  exposed_domains:
+    - light
+
 hue:
   bridges:
     - host: 192.168.86.46

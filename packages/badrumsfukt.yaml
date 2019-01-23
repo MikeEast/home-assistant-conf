@@ -47,7 +47,7 @@ automation:
       - service: homeassistant.turn_on
         data: 
           entity_id: light.bathroom_fan_level
-          brightness: 120
+          brightness: 200
 
   - alias: Badrumsfläkten av efter 10 minuter
     trigger:
@@ -55,7 +55,7 @@ automation:
       entity_id: binary_sensor.bathroom_humidity_sensor
       to: 'off'
       for:
-        minutes: 10
+        minutes: 3
     action:
       - service: homeassistant.turn_off
         entity_id: light.bathroom_fan_level

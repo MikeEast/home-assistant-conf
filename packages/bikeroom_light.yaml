@@ -1,5 +1,5 @@
 automation:
-  - alias: Bike Room light på on movement
+  - alias: Bike Room light on on movement
     trigger:
       platform: state
       entity_id: binary_sensor.bikeroom_sensor
@@ -9,7 +9,7 @@ automation:
         data: 
           entity_id: zwave.bikeroom_plug_switch       
 
-  - alias: Badrumsfläkten av efter 10 minuter
+  - alias: Bike Room light off on movement
     trigger:
       platform: state
       entity_id: binary_sensor.bikeroom_sensor

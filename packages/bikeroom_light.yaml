@@ -1,0 +1,22 @@
+automation:
+  - alias: Bike Room light på on movement
+    trigger:
+      platform: state
+      entity_id: binary_sensor.bikeroom_sensor
+      to: 'on'    
+    action:
+      - service: homeassistant.turn_on
+        data: 
+          entity_id: switch.bikeroom_plug
+          brightness: 200
+
+  - alias: Badrumsfläkten av efter 10 minuter
+    trigger:
+      platform: state
+      entity_id: binary_sensor.bikeroom_sensor
+      to: 'off'
+      for:
+        minutes: 3
+    action:
+      - service: homeassistant.turn_off
+        entity_id: switch.bikeroom_plug

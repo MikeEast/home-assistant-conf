@@ -7,7 +7,7 @@ automation:
     action:
       - service: homeassistant.turn_on
         data: 
-          entity_id: zwave.bikeroom_plug          
+          entity_id: zwave.bikeroom_plug_switch       
 
   - alias: Badrumsfläkten av efter 10 minuter
     trigger:
@@ -18,4 +18,4 @@ automation:
         minutes: 3
     action:
       - service: homeassistant.turn_off
-        entity_id: zwave.bikeroom_plug
+        entity_id: zwave.bikeroom_plug_switch

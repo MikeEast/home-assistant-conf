@@ -3,12 +3,12 @@ automation:
   - alias: Bike Room light on on movement
     trigger:
       platform: state
-      entity_id: binary_sensor.trapperadstrip_sensor
+      entity_id: input_boolean.test_trigger
       from: 'off'
       to: 'on'    
     action:
       - service: homeassistant.turn_on
-        entity_id: switch.bikeroom_plug_switch            
+        entity_id: switch.bikeroom_plug_switch
 
   - alias: Bike Room light off on movement
     trigger:

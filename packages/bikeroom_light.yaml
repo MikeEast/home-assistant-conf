@@ -6,7 +6,7 @@ automation:
       to: 'on'    
     action:
         service: homeassistant.turn_on
-        entity_id: zwave.bikeroom_plug_switch             
+        entity_id: switch.bikeroom_plug_switch            
 
   - alias: Bike Room light off on movement
     trigger:
@@ -17,4 +17,4 @@ automation:
         minutes: 3
     action:
         service: homeassistant.turn_off
-        entity_id: zwave.bikeroom_plug_switch
+        entity_id: switch.bikeroom_plug_switch

@@ -7,6 +7,10 @@ automation:
     action:
       - service: homeassistant.turn_on
         entity_id: zwave.bikeroom_plug_switch       
+      - service: notify.ios_mickes_iphone
+        data:
+          title: 'Bikeroom!'
+          message: 'Det rör sig i cykelrummet'
 
   - alias: Bike Room light off on movement
     trigger:

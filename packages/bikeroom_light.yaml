@@ -1,22 +1,23 @@
 automation:
+
   - alias: Bike Room light on on movement
     trigger:
       platform: state
-      entity_id: binary_sensor.bikeroom_sensor
+      entity_id: binary_sensor.trapperadstrip_sensor
       from: 'off'
       to: 'on'    
     action:
-        service: switch.turn_on
+      - service: switch.turn_on
         entity_id: switch.bikeroom_plug_switch            
 
   - alias: Bike Room light off on movement
     trigger:
       platform: state
-      entity_id: binary_sensor.bikeroom_sensor
+      entity_id: binary_sensor.trapperadstrip_sensor
       from: 'on'
       to: 'off'
       for:
         minutes: 3
     action:
-        service: switch.turn_off
+      - service: switch.turn_off
         entity_id: switch.bikeroom_plug_switch

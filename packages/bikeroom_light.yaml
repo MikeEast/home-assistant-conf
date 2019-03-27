@@ -1,4 +1,20 @@
 automation:
+  - alias: Test
+    trigger:
+      platform: state
+      entity_id: input_boolean.test_trigger      
+      to: 'on'
+    action:      
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.bathroom
+          volume: 0.2
+          message: 'Hej Frü'
+          delay: '00:00:02'
+      - service: homeassistant.turn_on
+        entity_id: switch.bikeroom_plug_switch
+      - service: switch.turn_on
+        entity_id: switch.bikeroom_plug_switch
 
   - alias: Bike Room light on on movement
     trigger:

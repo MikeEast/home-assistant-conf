@@ -10,3 +10,7 @@
       icon: mdi:cellphone-iphone
       friendly_name: Filippa
       homebridge_visible: true
+    device_tracker.lovisasiphone:
+      icon: mdi:cellphone-iphone
+      friendly_name: Lovisa
+      homebridge_visible: true

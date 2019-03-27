@@ -51,9 +51,8 @@
 - alias: 'Day Mode To Night'
   initial_state: 'on'
   trigger:
-    - platform: time
-      minutes: '/15'
-      seconds: 00
+    - platform: time_pattern
+      minutes: '15'      
   condition:
     condition: and
     conditions:

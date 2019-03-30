@@ -9,7 +9,7 @@ automation:
         data:
           sonos_entity: media_player.bathroom
           volume: 0.1
-          message: 'Hej Frü'
+          message: 'Hej hopp Frü'
           delay: '00:00:02'
       - service: homeassistant.turn_on
         entity_id: switch.bikeroom_plug_switch

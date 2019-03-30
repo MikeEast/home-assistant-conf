@@ -8,7 +8,7 @@ automation:
       - service: script.sonos_say
         data:
           sonos_entity: media_player.bathroom
-          volume: 0.2
+          volume: 0.1
           message: 'Hej Frü'
           delay: '00:00:02'
       - service: homeassistant.turn_on
@@ -19,7 +19,7 @@ automation:
   - alias: Bike Room light on on movement
     trigger:
       platform: state
-      entity_id: binary_sensor.bikeroom_sensor      
+      entity_id: binary_sensor.bathroom_humidity_sensor
       to: 'on'    
     action:
       - service: homeassistant.turn_on

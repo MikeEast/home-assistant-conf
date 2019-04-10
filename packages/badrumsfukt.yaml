@@ -59,7 +59,7 @@ automation:
     condition:      
       - condition: numeric_state
         entity_id: sensor.bathroom_humidity_relative_humidity
-        below: 50
+        below: 56
     action:
       - service: homeassistant.turn_off
         entity_id: light.bathroom_fan_level

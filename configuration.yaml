@@ -97,3 +97,10 @@ automation: !include_dir_merge_list automation
 notify: !include notify.yaml
 python_script:
 group: !include_dir_merge_named group/
+
+system_health:
+
+sensor:
+  platform: worxlandroid
+  host: 192.168.86.242
+  pin: 0000

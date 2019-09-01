@@ -19,7 +19,7 @@ light.*:
   hidden: true
 "sensor.*_power*":
   hidden: true
-"sensor.*sourcenodeid":
+"sensor.*sourcenodeid*":
   hidden: true
 "sensor.*system":
   hidden: true

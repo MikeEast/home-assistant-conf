@@ -6,6 +6,19 @@ input_boolean:
 
 automation:
 
+  - alias: Test
+    trigger:
+      platform: state
+      entity_id: input_boolean.test_trigger
+      to: 'on'
+    action: 
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.2
+          message: 'Hej, nu testas det lite.'
+          delay: '00:00:02'
+
   - alias: Filippa till aktiviteter
     trigger:
       platform: state
@@ -143,4 +156,4 @@ automation:
           sonos_entity: media_player.kitchen
           volume: 0.4
           message: 'Det är nu tio minuter till skolan börjar! Nu måste ni gå!'
-          delay: '00:00:10'
+          delay: '00:00:10'  

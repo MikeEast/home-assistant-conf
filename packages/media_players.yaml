@@ -23,9 +23,23 @@ group:
 script:
   sonos_say:
     alias: "Sonos TTS script"
-    sequence:          
-     - service: tts.google_say
+    sequence:
+     - service: sonos.snapshot
+       data_template:
+         entity_id: "{{ sonos_entity }}"
+     - service: sonos.unjoin
+       data_template:
+         entity_id: "{{ sonos_entity }}"
+     - service: media_player.volume_set
+       data_template:
+         entity_id: "{{ sonos_entity }}"
+         volume_level: "{{ volume }}"
+     - service: tts.google_translate_say
        data_template:
          entity_id: "{{ sonos_entity }}"
          message: "{{ message }}"
-         language: 'sv'     
+         language: 'sv'
+     - delay: "{{ delay }}"
+     - service: sonos.restore
+       data_template:
+         entity_id: "{{ sonos_entity }}"

@@ -19,6 +19,9 @@
   - service: notify.ios_filippasiphone
     data:
       message: "request_location_update"
+  - service: notify.ios_lovisasiphone
+    data:
+      message: "request_location_update"
   - delay: '00:10:00'
   # catch not_home
   - service: notify.ios_mickes_iphone

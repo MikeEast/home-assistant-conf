@@ -1,5 +1,0 @@
-alerts_card:
-  name: Alerts
-  entities:
-    - alert.kallardorr_open    
-    - alert.ytterdorr_open

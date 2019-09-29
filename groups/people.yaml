@@ -1,7 +1,8 @@
 persons:
   view: no
   entities:
-    - device_tracker.mickesiphone
+    - device_tracker.mickes
     - device_tracker.hannasiphone
     - device_tracker.filippasiphone
+    - device_tracker.lovisasiphone
     

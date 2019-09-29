@@ -1,16 +1,12 @@
-    device_tracker.mickesiphone:
+    device_tracker.mickes:
       icon: mdi:cellphone-iphone
-      friendly_name: Micke
-      homebridge_visible: true
+      friendly_name: Micke      
     device_tracker.hannasiphone:
       icon: mdi:cellphone-iphone
-      friendly_name: Hanna
-      homebridge_visible: true
+      friendly_name: Hanna      
     device_tracker.filippasiphone:
       icon: mdi:cellphone-iphone
-      friendly_name: Filippa
-      homebridge_visible: true
+      friendly_name: Filippa      
     device_tracker.lovisasiphone:
       icon: mdi:cellphone-iphone
-      friendly_name: Lovisa
-      homebridge_visible: true
+      friendly_name: Lovisa      

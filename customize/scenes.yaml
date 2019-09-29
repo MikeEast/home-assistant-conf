@@ -1,4 +1,0 @@
-    scene.lights_at_dark:
-      homebridge_visible: true
-    scene.welcome_home:
-      homebridge_visible: true

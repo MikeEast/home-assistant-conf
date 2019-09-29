@@ -88,8 +88,9 @@ zone: !include zones.yaml
 
 sun:
 tts:
-  - platform: google
-  
+  - platform: google_translate
+    language: 'sv'
+
 google:
   client_id: !secret google_calendar_client_id
   client_secret: !secret google_calendar_client_secret 

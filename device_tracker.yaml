@@ -3,9 +3,7 @@
     track_new_devices: True
     interval_seconds: 20
     consider_home: 360
-    home_interval: 10
-    exclude:
-      - !secret hass_host_ip      
+    home_interval: 10    
   - platform: icloud
     username: !secret icloud_id
     password: !secret icloud_secret

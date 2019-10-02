@@ -107,9 +107,7 @@ automation:
   - alias: 'Get the kids to school #1'
     trigger:
       platform: time
-      hours: 7
-      minutes: 30
-      seconds: 0
+      at: '07:30:00'
     condition:
       condition: state
       entity_id: binary_sensor.workday_sensor
@@ -125,9 +123,7 @@ automation:
   - alias: 'Get the kids to school #2'
     trigger:
       platform: time
-      hours: 7
-      minutes: 40
-      seconds: 0
+      at: '07:40:00'
     condition:
       condition: state
       entity_id: binary_sensor.workday_sensor
@@ -143,9 +139,7 @@ automation:
   - alias: 'Get the kids to school #3'
     trigger:
       platform: time
-      hours: 7
-      minutes: 50
-      seconds: 0
+      at: '07:50:00'
     condition:
       condition: state
       entity_id: binary_sensor.workday_sensor

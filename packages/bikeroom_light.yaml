@@ -1,16 +1,4 @@
 automation:
-  
-  - alias: Start
-    trigger:
-      platform: homeassistant      
-      event: start
-    action:      
-      - service: script.sonos_say
-        data:
-          sonos_entity: media_player.bathroom
-          volume: 0.2
-          message: 'Nu har Home Assistant startat!'
-          delay: '00:00:02'
 
   - alias: Bike Room light on on movement
     trigger:

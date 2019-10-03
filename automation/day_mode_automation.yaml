@@ -62,3 +62,8 @@
       - condition: time
         after: '22:00:00'
         before: '06:00:00'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.day_mode
+        option: Night

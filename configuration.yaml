@@ -11,6 +11,8 @@ homeassistant:
 config:
 http:
   base_url: !secret base_url
+  ssl_certificate: /vol/ssl/letsencrypt/fullchain.pem
+  ssl_key: /vol/ssl/letsencrypt/privkey.pem
 updater:
 discovery:
 ios:

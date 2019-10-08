@@ -10,9 +10,9 @@ homeassistant:
   packages: !include_dir_named packages
 config:
 http:
-  base_url: !secret base_url
-  ssl_certificate: /ssl/keys/letsencrypt/fullchain.pem
-  ssl_key: /ssl/keys/letsencrypt/privkey.pem
+#  base_url: !secret base_url
+#  ssl_certificate: /ssl/keys/letsencrypt/fullchain.pem
+#  ssl_key: /ssl/keys/letsencrypt/privkey.pem
 updater:
 discovery:
 ios:

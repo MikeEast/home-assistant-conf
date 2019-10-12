@@ -38,3 +38,5 @@ light.*:
   homebridge_visible: false
 "sensor.*burglar*":
   hidden: true
+"sensor.*fgfs101*":
+  hidden: true

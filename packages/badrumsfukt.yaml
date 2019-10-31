@@ -32,7 +32,7 @@ automation:
   - alias: Badrumsfläkten på on movement
     trigger:
       platform: state
-      entity_id: binary_sensor.bathroom_humidity_sensor
+      entity_id: binary_sensor.bathroom_motion
       to: 'on'
     condition: 
       condition: and
@@ -52,7 +52,7 @@ automation:
   - alias: Badrumsfläkten av efter 10 minuter
     trigger:
       platform: state
-      entity_id: binary_sensor.bathroom_humidity_sensor
+      entity_id: binary_sensor.bathroom_motion
       to: 'off'
       for:
         minutes: 3

@@ -75,7 +75,6 @@ binary_sensor: !include_dir_merge_list binary_sensors
 scene: !include_dir_merge_list scene
 input_select: !include_dir_merge_named input_select
 device_tracker: !include device_tracker.yaml
-camera: !include cameras.yaml  
 zone: !include zones.yaml
 
 # ########################################

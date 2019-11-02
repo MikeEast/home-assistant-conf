@@ -1,5 +1,0 @@
-camera:
-  name: Cameras
-  entities:
-    - camera.tallkameran
-    - binary_sensor.tallkameran_motion

@@ -40,4 +40,5 @@ light.*:
   hidden: true
 "sensor.*fgfs101*":
   hidden: true
-"sensor.aeon*"
+"sensor.aeon*":
+  hidden: true

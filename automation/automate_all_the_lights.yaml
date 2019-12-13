@@ -7,13 +7,13 @@ automation:
       action:
         service: light.turn_on
         entity_id: group.all_lights
-  - alias: 'Turn on all the lights'
+  - alias: 'Turn off all the lights'
     trigger:
       platform: sun
-        event: sunrise
-        offset: "-00:45:00"
+        event: sunset
+        offset: "+00:45:00"
       action:
-        service: light.turn_on
+        service: light.turn_off
         entity_id: group.all_lights
       
   

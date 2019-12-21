@@ -1,3 +1,20 @@
+
+group:
+  all_the_lights:
+    name: Allt ljus
+    icon: mdi:spotlight-beam    
+    entities:
+      - light.veranda
+      - light.dog_lamp
+      - light.globe_lamp
+      - light.ellos_lamp
+      - light.box_mirror
+      - light.box_plant
+      - light.fritz_lamp
+      - living_room_dimmer
+      - light.dining_room
+      - switch.office_wall_plug_switch
+
 automation:
 
   - alias: Turn on all the lights
@@ -6,13 +23,13 @@ automation:
       at: '06:30:00'
     action:
       service: light.turn_on
-      entity_id: group.all_lights
+      entity_id: group.all_the_lights
   - alias: Turn off all the lights
     trigger:
       platform: time
       at: '23:45:00'
     action:
       service: light.turn_off
-      entity_id: group.all_lights
+      entity_id: group.all_the_lights
       
   

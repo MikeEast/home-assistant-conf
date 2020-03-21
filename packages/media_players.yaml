@@ -8,17 +8,7 @@ homeassistant:
       friendly_name: Sonos Living room
     media_player.veranda:
       homebridge_visible: true
-      friendly_name: Sonos Veranda    
-
-group:  
-  sonos:
-    view: yes
-    name: Sonos    
-    entities:
-      - media_player.kithen
-      - media_player.vardagsrum
-      - media_player.veranda
-      - media_player.bathroom
+      friendly_name: Sonos Veranda
 
 script:
   sonos_say:

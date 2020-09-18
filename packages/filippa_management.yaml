@@ -151,3 +151,24 @@ automation:
           volume: 0.4
           message: 'Det är nu tio minuter till skolan börjar! Nu måste ni gå!'
           delay: '00:00:10'  
+
+  - alias: 'Ta med gympakläder till Vilheml'
+    trigger:
+      platform: time
+      at: '07:45:00'
+    condition:
+      - condition: and
+        conditions:
+        - condition: time
+          weekday:
+          - fri
+        - condition: state
+          entity_id: binary_sensor.workday_sensor
+          state: 'on'
+    action:
+      - service: script.sonos_say
+        data:
+          sonos_entity: media_player.kitchen
+          volume: 0.6
+          message: 'Det är fredag. Glöm inte att ta med gympakläder, Vilhelm'
+          delay: '00:00:10' 
